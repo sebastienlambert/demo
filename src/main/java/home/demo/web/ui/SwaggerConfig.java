@@ -3,6 +3,7 @@ package home.demo.web.ui;
 import static com.google.common.base.Predicates.containsPattern;
 import static com.google.common.base.Predicates.or;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -25,10 +26,15 @@ public class SwaggerConfig {
 				.paths(or(containsPattern("/api*"))).build();
 	}
 	
+	//@Value("${application.service.api.version}")
+	@Value("${application.version}")
+	private String apiVersion;
+
 	private ApiInfo getApiInfo() {
 		return new ApiInfo("My Demo API", 
 				"This is a demo to play around",
-				"1.0.0", // need to import it from pom.xml
+				// "1.0.0", // need to import it from pom.xml
+				apiVersion,
 				"Free of use",
 				"myemail@yahoo.com",
 				"No license required",
