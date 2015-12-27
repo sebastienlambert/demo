@@ -1,4 +1,4 @@
-package home.demo.web.model;
+package home.demo.web.greeting.model;
 
 
 public class GreetingDto {

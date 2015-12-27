@@ -1,4 +1,4 @@
-package home.demo.web.api;
+package home.demo.web.greeting.api;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import home.demo.web.model.GreetingDto;
+import home.demo.web.greeting.model.GreetingDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
